@@ -1,0 +1,6 @@
+body {
+    font-family: system-ui;
+}
+#textOutput {
+    white-space: pre-wrap;
+}
