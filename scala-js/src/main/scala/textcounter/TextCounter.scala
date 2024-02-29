@@ -13,9 +13,9 @@ object TextCounter {
       "click",
       (e: dom.MouseEvent) => {
         val textInput = textContent.value
-        val characters = textInput.length
-        val words = textInput.trim.split("\\s+").length
-        val lines = textInput.split("\\n").length
+        val characters = "%,d".format(textInput.length)
+        val words = "%,d".format(textInput.trim.split("\\s+").length)
+        val lines = "%,d".format(textInput.split("\\n").length)
         textOutput.textContent =
           s"Characters: $characters\nWords: $words\nLines: $lines"
       }
