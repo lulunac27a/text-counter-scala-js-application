@@ -1,8 +1,12 @@
 # Ignore generated Metals files
 .metals
+**/metals.sbt
 # Ignore Scala.js generated output files
 **/target
 **/.scala-build
 **/.bsp
+**/.bloop
 # Ignore generated Mac files
 **/.DS_Store
+# Ignore generated Node.js generated output files
+**/node_modules
