@@ -11,9 +11,9 @@ object TextCounterApp {
       .getElementById("textContent")
       .asInstanceOf[dom.html.TextArea]
       .value
-    val characters = textContent.length
-    val words = textContent.trim.split("\\s+").length
-    val lines = textContent.split("\\n").length
+    val characters = "%,d".format(textContent.length)
+    val words = "%,d".format(textContent.trim.split("\\s+").length)
+    val lines = "%,d".format(textContent.split("\\n").length)
     document.getElementById("textOutput").innerHTML =
       s"Characters: $characters\nWords: $words\nLines: $lines"
   }
@@ -30,6 +30,7 @@ object TextCounterApp {
             "Update Text Counter Output",
             onClick.preventDefault.mapTo(stateVarForm.now()) --> submitter
           ),
+          br(),
           div(idAttr := "textOutput", whiteSpace := "pre-wrap")
         )
       )
