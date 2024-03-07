@@ -10,3 +10,4 @@
 **/.DS_Store
 # Ignore generated Node.js generated output files
 **/node_modules
+**/package-lock.json
