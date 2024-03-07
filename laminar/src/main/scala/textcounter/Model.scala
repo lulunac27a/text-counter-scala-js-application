@@ -21,14 +21,16 @@ object TextCounterApp {
     def textCounterContent: HtmlElement = {
       div(
         idAttr := "app",
+        fontFamily := "system-ui",
         h1("Text Counter Application using Laminar"),
         div(
           textArea(idAttr := "textContent", rows := 10, cols := 80),
+          br(),
           button(
             "Update Text Counter Output",
             onClick.preventDefault.mapTo(stateVarForm.now()) --> submitter
           ),
-          div(idAttr := "textOutput")
+          div(idAttr := "textOutput", whiteSpace := "pre-wrap")
         )
       )
     }
