@@ -16,7 +16,8 @@ npm run dev
 
 ### Laminar
 
-```git clone https://github.com/lulunac27a/text-counter-scala-js-application.git
+```
+git clone https://github.com/lulunac27a/text-counter-scala-js-application.git
 cd text-counter-scala-js-application
 cd laminar
 sbt fastLinkJS
